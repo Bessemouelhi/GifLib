@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'idea'
     id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id "io.spring.dependency-management" version "1.0.8.RELEASE"
 }
 
 group 'com.bessemouelhi'
@@ -16,4 +17,8 @@ repositories {
 dependencies {
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
     compile 'org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.1.6.RELEASE'
+    // https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-java8time
+    compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-java8time', version: '3.0.4.RELEASE'
+
 }
