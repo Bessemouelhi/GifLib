@@ -55,4 +55,14 @@ public class GifRepository {
         }
         return gifs;
     }
+
+    public List<Gif> findByName(String search) {
+        List<Gif> gifs = new ArrayList<>();
+        for (Gif gif : ALL_GIFS) {
+            if (gif.getName().toLowerCase().contains(search.toLowerCase())) {
+                gifs.add(gif);
+            }
+        }
+        return gifs;
+    }
 }
